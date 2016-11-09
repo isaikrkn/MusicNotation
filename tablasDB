@@ -1,0 +1,74 @@
+create table users(
+idUser serial,
+nombre varchar(50),
+apellidos varchar(50),
+ciudad varchar(50),
+correo varchar(50),
+pass varchar(50),
+especialidad varchar(30),
+PRIMARY KEY (idUser)
+);
+
+create table Instruments(
+numero serial,
+nombre varchar(30),
+Primary Key(nombre)
+);
+
+CREATE TABLE partitura
+(
+  "idP" serial,
+  titulo varchar(50),
+  composer varchar(50),
+  instrumento varchar(50),
+  numerador integer,
+  denominador integer,
+  expresion varchar(30),
+  tonalidad varchar(30),
+  CONSTRAINT "idP" PRIMARY KEY ("idP"),
+  CONSTRAINT instrumento FOREIGN KEY (instrumento)
+      REFERENCES instruments (nombre) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE partitura
+  OWNER TO postgres;
+
+-- Index: fki_instrumento
+
+-- DROP INDEX fki_instrumento;
+
+CREATE INDEX fki_instrumento
+  ON partitura
+  USING btree
+  (instrumento);
+insert into instruments(nombre) values('Piano')
+insert into instruments(nombre) values('Clavesin');
+insert into instruments(nombre) values('Harpiscordio');
+insert into instruments(nombre) values('Clavecin');
+insert into instruments(nombre) values('Organo');
+insert into instruments(nombre) values('Guitarra');
+insert into instruments(nombre) values('Arpa');
+insert into instruments(nombre) values('Laud');
+insert into instruments(nombre) values('Citara');
+insert into instruments(nombre) values('Violin');
+insert into instruments(nombre) values('Viola');
+insert into instruments(nombre) values('Violonchelo');
+insert into instruments(nombre) values('Contrabajo');
+insert into instruments(nombre) values('Trompeta');
+insert into instruments(nombre) values('Trombon');
+insert into instruments(nombre) values('Tuba');
+insert into instruments(nombre) values('Saxofon');
+insert into instruments(nombre) values('Corno Ingles');
+insert into instruments(nombre) values('Corno Frances');
+insert into instruments(nombre) values('Bajo Electrico');
+insert into instruments(nombre) values('Flauta travesera');
+insert into instruments(nombre) values('Flautin');
+insert into instruments(nombre) values('Quena');
+insert into instruments(nombre) values('Flauta Dulce');
+insert into instruments(nombre) values('Ocarina');
+insert into instruments(nombre) values('Oboe');
+insert into instruments(nombre) values('Clarinete');
+insert into instruments(nombre) values('Fagot');

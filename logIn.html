@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="stylesheet" href="index_style.css">
+	<script src="validar.js"></script>
+	<link rel="stylesheet"  href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+</head>
+<body background="images/fondo.jpeg" marginheight="75" marginwith="75">
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html"><span class="primero"><i class="icon icon-home3"></i></span>Metrick Maker</a></li>
+				<li><a href="#"><span class="tercero"><i class="icon icon-library"></i></span>Scores</a>
+					<ul>
+						<li><a href="#">Browse</a></li>
+						<li><a href="logIn.html">mis Partituras</a></li>
+					</ul>
+				</li>
+				<li><a href="logIn.html"><span class="cuarto"><i class="icon icon-user-check"></i></span>Log In</a></li>
+			</ul>
+		</nav>
+	</header>
+<section id="formulario">
+	<p id="titulo"><font face = "BankGothic Md BT" size="4" color="#565051">Log In</p>
+	<form action="logIn.php" method="POST" name="form" id="form">
+	<input type="mail" id="email" name="email" placeholder="email">
+	<input type="password" id="pass" name="pass" placeholder="password">
+	<input type="submit" value="send" id="boton" name="boton">				
+	</form>
+</section>
+</body>
+</html>

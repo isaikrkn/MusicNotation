@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="index_style.css">
+	<script src="validar.js"></script>
+	<link rel="stylesheet"  href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+</head>
+<body background="images/fondo.jpeg" marginheight="75" marginwith="75">
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html"><span class="primero"><i class="icon icon-home3"></i></span>Metrick Maker</a></li>
+				<li><a href="#"><span class="tercero"><i class="icon icon-library"></i></span>Scores</a>
+					<ul>
+						<li><a href="#">Browse</a></li>
+						<li><a href="logIn.html">my Scores</a></li>
+					</ul>
+				</li>
+				<li><a href="logIn.html"><span class="cuarto"><i class="icon icon-user-check"></i></span>Log In</a></li>
+			</ul>
+		</nav>
+	</header>
+<section id="formulario">
+	<p id="titulo"><font face = "BankGothic Md BT" size="4" color="#565051">Wellcome to Metrick Maker</p>
+	<form action="register_user.php" method="post" name="form" id="form">
+	<input type="text" id="nombre" name="nombre" placeholder="Name">
+	<input type="text" id="apellidos" name="apellidos" placeholder="Last name">
+	<input type="text" id="ciudad" name="ciudad" placeholder="City">
+	<input type="mail" id="mail" name="mail" placeholder="email">
+	<input type="password" id="pass1" name="pass1" placeholder="password">
+	<input type="password" id="pass2" name="pass2" placeholder="confirm password">
+	<center>
+	<select name="especialidad">
+	<option value="Compositor" id="Compositor">Compositor</option>
+	<option value="Interprete" id="Interprete">Interprete</option>
+	<option value="Director" id="Director">Director</option>
+	<option value="Arreglista" id="Arreglista">Arreglista</option>					
+	</select>
+	</center>
+	<input type="submit" value="send" id="boton" name="boton">				
+	</form>
+</section>
+</body>
+</html>
