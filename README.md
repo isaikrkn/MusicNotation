@@ -72,25 +72,7 @@ Read our detailed guide on integrating with VexFlow.
 EasyScore
 EasyScore is VexFlow's high-level API for creating music notation. On a web page containing a <div id="output"></div>, the following code displays a score:
 
-const { Factory, EasyScore, System } = Vex.Flow;
+![image](https://github.com/user-attachments/assets/c414bb9a-fa63-4b0a-8d5c-9bdcc2e8ba46)
 
-const vf = new Factory({
-  renderer: { elementId: 'output', width: 500, height: 200 },
-});
-
-const score = vf.EasyScore();
-const system = vf.System();
-
-system
-  .addStave({
-    voices: [
-      score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
-      score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
-    ],
-  })
-  .addClef('treble')
-  .addTimeSignature('4/4');
-
-vf.draw();
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
